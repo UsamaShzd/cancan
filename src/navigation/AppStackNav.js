@@ -11,6 +11,7 @@ const AppStackNav = () => {
     <Navigator
       screenOptions={{
         headerShown: false,
+        cardStyle: { backgroundColor: "#fff" },
       }}
     >
       <Screen name="AppDrawerNav" component={AppDrawerNav} />
