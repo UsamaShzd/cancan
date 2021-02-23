@@ -1,17 +1,15 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import CustomDrawer from "./CustomDrawer";
 
-//screens
-import HomeScreen from "../screens/HomeScreen";
-import WishlistScreen from "../screens/WishlistScreen";
+import AppTabNav from "./AppTabNav";
 
 const { Navigator, Screen } = createDrawerNavigator();
 
 const AppDrawerNav = () => {
   return (
-    <Navigator>
-      <Screen name="Home" component={HomeScreen} />
-      <Screen name="Wishlist" component={WishlistScreen} />
+    <Navigator drawerContent={CustomDrawer}>
+      <Screen name="AppTabNav" component={AppTabNav} />
     </Navigator>
   );
 };
