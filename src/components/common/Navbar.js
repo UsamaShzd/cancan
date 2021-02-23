@@ -13,29 +13,35 @@ import colors from "../../configs/colors";
 import AppText from "./AppText";
 
 const Navbar = (props) => {
-  const { title = "" } = props;
+  const { title = "", navigation } = props;
+
+  const openDrawer = () => {
+    navigation.openDrawer();
+  };
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <View style={styles.leftContainer}>
-          <SimpleLineIcons name="menu" size={25} />
+          <TouchableWithoutFeedback onPress={openDrawer}>
+            <SimpleLineIcons name="menu" size={22} />
+          </TouchableWithoutFeedback>
           <AppText style={styles.title}>{title}</AppText>
         </View>
 
         <View style={styles.leftContainer}>
           <View style={styles.iconMargin}>
             <TouchableWithoutFeedback>
-              <Ionicons name="cart-outline" size={30} />
+              <Ionicons name="cart-outline" size={25} />
             </TouchableWithoutFeedback>
           </View>
           <View style={styles.iconMargin}>
             <TouchableWithoutFeedback>
-              <Entypo name="sound-mix" size={25} />
+              <Entypo name="sound-mix" size={22} />
             </TouchableWithoutFeedback>
           </View>
           <View>
             <TouchableWithoutFeedback>
-              <Ionicons name="notifications-outline" size={30} />
+              <Ionicons name="notifications-outline" size={25} />
             </TouchableWithoutFeedback>
           </View>
         </View>
