@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import Navbar from "../components/common/Navbar";
+import Navbar from "../components/Navbar";
 
 const WishlistScreen = ({ navigation }) => {
   return (

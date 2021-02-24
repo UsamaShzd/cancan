@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
-import AppText from "./common/AppText";
+import colors from "../configs/colors";
+import AppText from "./AppText";
 
 const StoryItem = ({ imageUrl, text, containerStyle }) => {
   return (
@@ -32,8 +33,8 @@ const styles = StyleSheet.create({
   image: {
     width: 50,
     height: 50,
+    backgroundColor: colors.LIGHT_GREY,
   },
-
   text: {
     marginTop: 7,
   },

@@ -8,7 +8,7 @@ import {
 
 import { Entypo, SimpleLineIcons, Ionicons } from "@expo/vector-icons";
 
-import colors from "../../configs/colors";
+import colors from "../configs/colors";
 
 import AppText from "./AppText";
 
