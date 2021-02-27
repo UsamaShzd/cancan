@@ -17,44 +17,45 @@ const { width: screenWidth } = Dimensions.get("window");
 
 const imageWidthHeight = (screenWidth - 60) / 2 - 20;
 
-const ProductCard = ({ product = {} }) => {
+const ProductCard = ({ product = {}, onPress, onAddToCart, onLike }) => {
   return (
     <Card style={styles.cardStyle}>
-      <View style={styles.container}>
-        <Image
-          resizeMode="cover"
-          source={{ uri: product.imageUrl }}
-          style={styles.image}
-        />
-        <AppText style={styles.name}>{product.name}</AppText>
-        <AppText style={[styles.name, { color: colors.PRIMARY_GREEN }]}>
-          {product.text}
-        </AppText>
+      <TouchableWithoutFeedback onPress={onPress}>
+        <View style={styles.container}>
+          <Image
+            resizeMode="cover"
+            source={{ uri: product.imageUrl }}
+            style={styles.image}
+          />
+          <AppText style={styles.name}>{product.name}</AppText>
+          <AppText style={[styles.name, { color: colors.PRIMARY_GREEN }]}>
+            {product.text}
+          </AppText>
 
-        <View style={styles.likeContainer}>
-          <TouchableOpacity>
-            <View
-              style={[
-                styles.likeIconWrapper,
-                {
-                  backgroundColor: product.liked
-                    ? colors.PRIMARY_GREEN_TRANSPARENT
-                    : colors.BLACK_TRANSPARENT,
-                },
-              ]}
-            >
-              <MaterialCommunityIcons
-                name="heart"
-                color={product.liked ? colors.PRIMARY_GREEN : colors.WHITE}
-                size={18}
-                style={styles.likeIcon}
-              />
-            </View>
-          </TouchableOpacity>
+          <View style={styles.likeContainer}>
+            <TouchableOpacity onPress={onLike}>
+              <View
+                style={[
+                  styles.likeIconWrapper,
+                  {
+                    backgroundColor: product.liked
+                      ? colors.PRIMARY_GREEN_TRANSPARENT
+                      : colors.BLACK_TRANSPARENT,
+                  },
+                ]}
+              >
+                <MaterialCommunityIcons
+                  name="heart"
+                  color={product.liked ? colors.PRIMARY_GREEN : colors.WHITE}
+                  size={18}
+                  style={styles.likeIcon}
+                />
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
-
-      <TouchableWithoutFeedback>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={onAddToCart}>
         <View style={styles.addToCartBtn}>
           <Ionicons name="cart-outline" size={20} color={colors.WHITE} />
           <AppText style={styles.addToCartBtnTxt}>ADD TO CART</AppText>

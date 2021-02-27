@@ -170,7 +170,14 @@ const ExploreScreen = ({ navigation }) => {
         numColumns={2}
         data={productsList}
         renderItem={({ item }) => {
-          return <ProductCard product={item} />;
+          return (
+            <ProductCard
+              product={item}
+              onPress={() => navigation.navigate("Product")}
+              onLike={() => alert("like")}
+              onAddToCart={() => alert("add to cart")}
+            />
+          );
         }}
         keyExtractor={(item) => item.name}
       />
