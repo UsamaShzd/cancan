@@ -13,33 +13,11 @@ const { Navigator, Screen } = createStackNavigator();
 
 const AppStackNav = () => {
   return (
-    <Navigator>
-      <Screen
-        name="Home"
-        options={{ headerShown: false }}
-        component={AppDrawerNav}
-      />
-      <Screen
-        name="Product"
-        options={{ headerShown: false }}
-        component={ProductScreen}
-      />
-      <Screen
-        name="Welcome"
-        component={WelcomeScreen}
-        options={{ headerShown: false }}
-      />
-      <Screen
-        name="Cart"
-        component={CartScreen}
-        options={{
-          headerTitle: "CART",
-          headerStyle: {
-            backgroundColor: colors.PRIMARY_GREEN,
-          },
-          headerTintColor: colors.WHITE,
-        }}
-      />
+    <Navigator screenOptions={{ headerShown: false }}>
+      <Screen name="Home" component={AppDrawerNav} />
+      <Screen name="Product" component={ProductScreen} />
+      <Screen name="Welcome" component={WelcomeScreen} />
+      <Screen name="Cart" component={CartScreen} />
     </Navigator>
   );
 };
