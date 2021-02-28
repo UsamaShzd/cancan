@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+import CustomTabBar from "./CustomTabBar";
 //icons
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
@@ -13,8 +14,6 @@ import ExploreScreen from "../screens/ExploreScreen";
 import CategoriesScreen from "../screens/CategoriesScreen";
 import MyAccountScreen from "../screens/MyAccountScreen";
 
-const ICON_SIZE = 30;
-
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const AppTabNav = () => {
@@ -24,17 +23,18 @@ const AppTabNav = () => {
       tabBarOptions={{
         activeTintColor: colors.PRIMARY_GREEN,
       }}
+      tabBar={CustomTabBar}
     >
       <Screen
         name="Explore"
         component={ExploreScreen}
         options={{
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color }) => {
             return (
               <MaterialCommunityIcons
                 name="storefront-outline"
                 color={color}
-                size={size}
+                size={25}
               />
             );
           },
@@ -44,9 +44,9 @@ const AppTabNav = () => {
         name="Wishlist"
         component={WishlistScreen}
         options={{
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color }) => {
             return (
-              <MaterialCommunityIcons name="heart" color={color} size={size} />
+              <MaterialCommunityIcons name="heart" color={color} size={25} />
             );
           },
         }}
@@ -55,9 +55,9 @@ const AppTabNav = () => {
         name="Categories"
         component={CategoriesScreen}
         options={{
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ color }) => {
             return (
-              <MaterialCommunityIcons name="cards" color={color} size={size} />
+              <MaterialCommunityIcons name="cards" color={color} size={25} />
             );
           },
         }}
@@ -67,8 +67,8 @@ const AppTabNav = () => {
         component={MyAccountScreen}
         options={{
           tabBarLabel: "My Account",
-          tabBarIcon: ({ color, size }) => {
-            return <MaterialIcons name="person" color={color} size={32} />;
+          tabBarIcon: ({ color }) => {
+            return <MaterialIcons name="person" color={color} size={26} />;
           },
         }}
       />

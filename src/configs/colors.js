@@ -7,4 +7,5 @@ export default {
   PRIMARY_GREEN_TRANSPARENT: "rgba(59, 117, 56, 0.5)",
   DANGER: "red",
   ORANGE: "#ed923f",
+  TAB_BAR_GREY: "#8e8e8f",
 };

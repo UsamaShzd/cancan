@@ -3,22 +3,26 @@ import {
   View,
   Image,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, EvilIcons, Fontisto } from "@expo/vector-icons";
 
 import AppText from "../components/AppText";
-import RoundedButton from "../components/AppButton";
+import AppButton from "../components/AppButton";
 
 import colors from "../configs/colors";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <SafeAreaView>
-          <TouchableOpacity style={styles.backButton}>
+          <TouchableOpacity
+            style={styles.backButton}
+            onPress={() => navigation.goBack()}
+          >
             <Ionicons name="arrow-back" size={30} color={colors.WHITE} />
           </TouchableOpacity>
 
@@ -33,10 +37,104 @@ const WelcomeScreen = () => {
       </View>
 
       <View style={styles.buttonContainer}>
-        <RoundedButton
-          title="LOGIN WITH GOOGLE"
-          containerStyle={styles.buttonStyle}
-        />
+        <ScrollView style={{ flex: 1 }}>
+          <AppButton containerStyle={[styles.buttonStyle, styles.googleBtn]}>
+            <Ionicons name="logo-google" size={20} style={{ marginRight: 8 }} />
+            <AppText style={styles.btnTextStyle}>Login With Google</AppText>
+          </AppButton>
+
+          <AppButton containerStyle={[styles.buttonStyle, styles.facebookBtn]}>
+            <EvilIcons
+              name="sc-facebook"
+              size={30}
+              style={{ marginRight: 8 }}
+              color={colors.WHITE}
+            />
+            <AppText style={[styles.btnTextStyle, styles.whiteText]}>
+              Login With Facebook
+            </AppText>
+          </AppButton>
+
+          <AppButton containerStyle={[styles.buttonStyle, styles.appleBtn]}>
+            <Ionicons
+              name="logo-apple"
+              size={20}
+              style={{ marginRight: 8 }}
+              color={colors.WHITE}
+            />
+            <AppText style={[styles.btnTextStyle, styles.whiteText]}>
+              Login With Apple
+            </AppText>
+          </AppButton>
+
+          <AppButton containerStyle={[styles.buttonStyle, styles.mobileBtn]}>
+            <Fontisto
+              name="mobile"
+              size={20}
+              style={{ marginRight: 8 }}
+              color={colors.WHITE}
+            />
+            <AppText style={[styles.btnTextStyle, styles.whiteText]}>
+              Login With Mobile
+            </AppText>
+          </AppButton>
+
+          <AppButton containerStyle={[styles.buttonStyle, styles.appleBtn]}>
+            <EvilIcons
+              name="envelope"
+              size={30}
+              style={{ marginRight: 8 }}
+              color={colors.WHITE}
+            />
+            <AppText style={[styles.btnTextStyle, styles.whiteText]}>
+              Login With Email
+            </AppText>
+          </AppButton>
+
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              marginVertical: 20,
+            }}
+          >
+            <View
+              style={{
+                flex: 1,
+                height: 1,
+                backgroundColor: colors.LIGHT_GREY,
+                marginHorizontal: 20,
+              }}
+            />
+            <AppText>OR</AppText>
+            <View
+              style={{
+                flex: 1,
+                height: 1,
+                backgroundColor: colors.LIGHT_GREY,
+                marginHorizontal: 20,
+              }}
+            />
+          </View>
+
+          <AppButton
+            containerStyle={[
+              styles.buttonStyle,
+              styles.appleBtn,
+              { marginTop: 0 },
+            ]}
+          >
+            <EvilIcons
+              name="envelope"
+              size={30}
+              style={{ marginRight: 8 }}
+              color={colors.WHITE}
+            />
+            <AppText style={[styles.btnTextStyle, styles.whiteText]}>
+              Login With Email
+            </AppText>
+          </AppButton>
+        </ScrollView>
       </View>
     </View>
   );
@@ -81,9 +179,38 @@ const styles = StyleSheet.create({
 
   buttonContainer: {
     marginHorizontal: 20,
+    paddingTop: 20,
+    flex: 1,
   },
 
   buttonStyle: {
-    marginTop: 15,
+    marginTop: 25,
+    borderRadius: 60,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 0,
+    height: 50,
+  },
+
+  btnTextStyle: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  googleBtn: {
+    backgroundColor: colors.WHITE,
+  },
+  facebookBtn: {
+    backgroundColor: "#3b5998",
+  },
+  appleBtn: {
+    backgroundColor: colors.BLACK,
+  },
+
+  mobileBtn: {
+    backgroundColor: "#d1021c",
+  },
+  whiteText: {
+    color: colors.WHITE,
   },
 });
