@@ -13,20 +13,60 @@ import colors from "../configs/colors";
 const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 const ExploreScreen = ({ navigation }) => {
   const [storyItems, setStoryItems] = useState([
-    { imageUrl: "https://picsum.photos/50", text: "Item 1" },
-    { imageUrl: "https://picsum.photos/51", text: "Item 2" },
-    { imageUrl: "https://picsum.photos/52", text: "Item 3" },
-    { imageUrl: "https://picsum.photos/53", text: "Item 4" },
-    { imageUrl: "https://picsum.photos/54", text: "Item 5" },
-    { imageUrl: "https://picsum.photos/55", text: "Item 6" },
-    { imageUrl: "https://picsum.photos/56", text: "Item 7" },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514938.JPG",
+      text: "Item 1",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514883.JPG",
+      text: "Item 2",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514803.JPG",
+      text: "Item 3",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/khuzam.jpg",
+      text: "Item 4",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/3669638d06783293940954f2ae4843dc66a330cf_400_400.jpeg",
+      text: "Item 5",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/fa0b40c6cb21395c094b8a5ea5382589.jpg",
+      text: "Item 6",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/image1_P031.jpeg",
+      text: "Item 7",
+    },
   ]);
 
   const [saleImages, setSaleImages] = useState([
-    { imageUrl: "https://picsum.photos/500/300" },
-    { imageUrl: "https://picsum.photos/501/301" },
-    { imageUrl: "https://picsum.photos/502/302" },
-    { imageUrl: "https://picsum.photos/503/303" },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/slider-images/1607074269.jpeg",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/slider-images/1607074240.jpeg",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/slider-images/1607074269.jpeg",
+    },
+    {
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/slider-images/1607074240.jpeg",
+    },
   ]);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
@@ -34,31 +74,36 @@ const ExploreScreen = ({ navigation }) => {
     {
       name: "Product 1",
       text: "AED 150",
-      imageUrl: "https://picsum.photos/300",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514938.JPG",
       liked: true,
     },
     {
       name: "Product 2",
       text: "AED 150",
-      imageUrl: "https://picsum.photos/301",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514883.JPG",
       liked: false,
     },
     {
       name: "Product 3",
       text: "AED 150",
-      imageUrl: "https://picsum.photos/302",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514803.JPG",
       liked: false,
     },
     {
       name: "Product 4",
       text: "AED 150",
-      imageUrl: "https://picsum.photos/303",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/khuzam.jpg",
       liked: false,
     },
     {
       name: "Product 5",
       text: "AED 150",
-      imageUrl: "https://picsum.photos/304",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/3669638d06783293940954f2ae4843dc66a330cf_400_400.jpeg",
       liked: false,
     },
   ]);
@@ -135,13 +180,12 @@ const ExploreScreen = ({ navigation }) => {
         {renderStoryList()}
         {renderSaleCarousal()}
         <View style={styles.saleBannerWrapper}>
-          <TouchableWithoutFeedback
-            onPress={() => {
-              alert("sale banner");
-            }}
-          >
+          <TouchableWithoutFeedback>
             <Image
-              source={{ uri: "https://picsum.photos/300/110" }}
+              source={{
+                uri:
+                  "http://ecommerce.sidtechnology.me/public/assets/media/slider-images/1607074294.jpeg",
+              }}
               resizeMode="cover"
               style={styles.saleBanner}
             />

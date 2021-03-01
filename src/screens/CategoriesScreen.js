@@ -11,42 +11,44 @@ const CategoriesScreen = ({ navigation }) => {
     {
       name: "Category 1",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/150",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514938.JPG",
     },
     {
       name: "Category 2",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/151",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514883.JPG",
     },
     {
       name: "Category 3",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/152",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1607514803.JPG",
     },
     {
       name: "Category 4",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/153",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/khuzam.jpg",
     },
     {
       name: "Category 5",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/154",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/3669638d06783293940954f2ae4843dc66a330cf_400_400.jpeg",
     },
     {
       name: "Category 6",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/155",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/fa0b40c6cb21395c094b8a5ea5382589.jpg",
     },
     {
       name: "Category 7",
       type: "COLLECTION",
-      imageUrl: "https://picsum.photos/156",
-    },
-    {
-      name: "Category 8",
-      type: "COLLECTION",
-      imageUrl: "https://picsum.photos/157",
+      imageUrl:
+        "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/image1_P031.jpeg",
     },
   ]);
 

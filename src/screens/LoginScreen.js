@@ -74,6 +74,7 @@ const LoginScreen = ({ navigation }) => {
                     borderColor: colors.PRIMARY_GREEN,
                   },
                 ]}
+                onPress={() => navigation.navigate("CreateAccount")}
               >
                 <AppText
                   style={[styles.btnText, { color: colors.PRIMARY_GREEN }]}

@@ -38,6 +38,7 @@ const ProductScreen = ({ navigation }) => {
       </View>
     );
   };
+
   return (
     <View style={styles.container}>
       <Navbar
@@ -54,7 +55,10 @@ const ProductScreen = ({ navigation }) => {
           <Image
             style={styles.productImage}
             resizeMode="cover"
-            source={{ uri: "https://picsum.photos/304" }}
+            source={{
+              uri:
+                "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/khuzam.jpg",
+            }}
           />
         </View>
         <View style={styles.detailContainer}>
