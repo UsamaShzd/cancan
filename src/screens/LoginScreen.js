@@ -23,7 +23,10 @@ const LoginScreen = ({ navigation }) => {
         <Image
           style={styles.image}
           resizeMode="cover"
-          source={{ uri: "https://picsum.photos/400/600" }}
+          source={{
+            uri:
+              "http://ecommerce.sidtechnology.me/public/assets/media/products/uploaded/1606203999.jpeg",
+          }}
         />
       </View>
       <ScrollView>

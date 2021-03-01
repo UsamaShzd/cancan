@@ -39,12 +39,22 @@ const WelcomeScreen = ({ navigation }) => {
 
       <View style={styles.buttonContainer}>
         <ScrollView style={{ flex: 1 }}>
-          <AppButton containerStyle={[styles.buttonStyle, styles.googleBtn]}>
+          <AppButton
+            containerStyle={[styles.buttonStyle, styles.googleBtn]}
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
+          >
             <Ionicons name="logo-google" size={20} style={{ marginRight: 8 }} />
             <AppText style={styles.btnTextStyle}>Login With Google</AppText>
           </AppButton>
 
-          <AppButton containerStyle={[styles.buttonStyle, styles.facebookBtn]}>
+          <AppButton
+            containerStyle={[styles.buttonStyle, styles.facebookBtn]}
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
+          >
             <EvilIcons
               name="sc-facebook"
               size={30}
@@ -56,7 +66,12 @@ const WelcomeScreen = ({ navigation }) => {
             </AppText>
           </AppButton>
 
-          <AppButton containerStyle={[styles.buttonStyle, styles.appleBtn]}>
+          <AppButton
+            containerStyle={[styles.buttonStyle, styles.appleBtn]}
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
+          >
             <Ionicons
               name="logo-apple"
               size={20}
@@ -68,7 +83,12 @@ const WelcomeScreen = ({ navigation }) => {
             </AppText>
           </AppButton>
 
-          <AppButton containerStyle={[styles.buttonStyle, styles.mobileBtn]}>
+          <AppButton
+            containerStyle={[styles.buttonStyle, styles.mobileBtn]}
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
+          >
             <Fontisto
               name="mobile"
               size={20}
@@ -80,7 +100,12 @@ const WelcomeScreen = ({ navigation }) => {
             </AppText>
           </AppButton>
 
-          <AppButton containerStyle={[styles.buttonStyle, styles.appleBtn]}>
+          <AppButton
+            containerStyle={[styles.buttonStyle, styles.appleBtn]}
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
+          >
             <EvilIcons
               name="envelope"
               size={30}
