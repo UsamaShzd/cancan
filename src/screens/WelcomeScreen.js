@@ -13,6 +13,7 @@ import AppText from "../components/AppText";
 import AppButton from "../components/AppButton";
 
 import colors from "../configs/colors";
+import LineText from "../components/LineText";
 
 const WelcomeScreen = ({ navigation }) => {
   return (
@@ -91,38 +92,16 @@ const WelcomeScreen = ({ navigation }) => {
             </AppText>
           </AppButton>
 
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              marginVertical: 20,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                height: 1,
-                backgroundColor: colors.LIGHT_GREY,
-                marginHorizontal: 20,
-              }}
-            />
-            <AppText>OR</AppText>
-            <View
-              style={{
-                flex: 1,
-                height: 1,
-                backgroundColor: colors.LIGHT_GREY,
-                marginHorizontal: 20,
-              }}
-            />
-          </View>
-
+          <LineText text={"OR"} />
           <AppButton
             containerStyle={[
               styles.buttonStyle,
               styles.appleBtn,
               { marginTop: 0 },
             ]}
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
           >
             <EvilIcons
               name="envelope"
